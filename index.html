@@ -4,22 +4,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>导航页面</title>
     <style>
-      a {
-        color: #333;
-        text-decoration: none;
+      body {
+        background-image: url("http://api.mtyqx.cn/tapi/random.php");
+      }
+      canvas#live2dcanvas {
+        border: 0 !important;
+        left: 0;
       }
       p a {
+        color: #333;
         width: 1.2em;
-        height: 1.2em;
-        vertical-align: middle;
+        height: 3em;
+        margin: 0 1.2em;
+        text-decoration: none;
       }
       button {
-        background: #1aab8a;
+        background: #3ec5a6;
         color: #fff;
         border: none;
+        margin: 0 0.4em;
         position: relative;
         height: 30px;
-        font-size: 1.3em;
+        font-size: 1.5em;
+        font-family: "Times New Roman", Times, serif;
         width: 10em;
         cursor: pointer;
         transition: 800ms ease all;
@@ -27,9 +34,18 @@
       }
       button:hover {
         background: #fff;
-        color: #1aab8a;
+        color: #dd588b;
       }
-      button:before,
+      button:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background: #55ee41;
+        transition: 500ms ease all;
+      }
       button:after {
         content: "";
         position: absolute;
@@ -37,8 +53,8 @@
         right: 0;
         height: 2px;
         width: 0;
-        background: #1aab8a;
-        transition: 400ms ease all;
+        background: #dd588b;
+        transition: 500ms ease all;
       }
       button:after {
         right: inherit;
@@ -60,10 +76,19 @@
       <a href="http://leafmoes.cn:8001/">&#9998;叶之幻月</a>
     </p>
     <button>特 效</button>
-    <p>
+    <p class="pencil">
       <a href="https://leafmoes.netlify.com/zft.html"
         >&#9998;特效：旋转正方体</a
       >
     </p>
+    <button>关于 作者</button>
+    <p style="margin:1em 1.2em;">&#9998;QQ：2111800583</p>
+    <p style="margin:1em 1.2em;">
+      &#9998;简介：[本内容乃最高机密，您无权查看！]
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+    <script type="text/javascript">
+      L2Dwidget.init();
+    </script>
   </body>
 </html>
