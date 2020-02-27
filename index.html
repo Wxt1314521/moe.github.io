@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -13,10 +13,57 @@
         height: 1.2em;
         vertical-align: middle;
       }
+      button {
+        background: #1aab8a;
+        color: #fff;
+        border: none;
+        position: relative;
+        height: 30px;
+        font-size: 1.3em;
+        width: 10em;
+        cursor: pointer;
+        transition: 800ms ease all;
+        outline: none;
+      }
+      button:hover {
+        background: #fff;
+        color: #1aab8a;
+      }
+      button:before,
+      button:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background: #1aab8a;
+        transition: 400ms ease all;
+      }
+      button:after {
+        right: inherit;
+        top: inherit;
+        left: 0;
+        bottom: 0;
+      }
+      button:hover:before,
+      button:hover:after {
+        width: 100%;
+        transition: 800ms ease all;
+      }
     </style>
   </head>
   <body>
     <h1 style="text-align:center;">导航页面</h1>
-    <p><a href="https://leafmoes.netlify.com/zft.html">&nbsp;&nbsp;&nbsp;&nbsp;&#9998;特效：旋转正方体</a></p>
+    <button>My'Blog</button>
+    <p>
+      <a href="http://leafmoes.cn:8001/">&#9998;叶之幻月</a>
+    </p>
+    <button>特 效</button>
+    <p>
+      <a href="https://leafmoes.netlify.com/zft.html"
+        >&#9998;特效：旋转正方体</a
+      >
+    </p>
   </body>
 </html>
